@@ -5,8 +5,7 @@ export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginStatus, setLoginStatus] = useState(false);
-    const [errorMessage, setErrorMessage] = useState(''); // Added state for error message
-
+    const [errorMessage, setErrorMessage] = useState('');
     const handleSignIn = (e) => {
         e.preventDefault();
         checkLoginApi();

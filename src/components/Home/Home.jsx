@@ -1,49 +1,112 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
-export default function Home() {
-    return (
-        <div className="mx-auto w-full max-w-7xl">
-            <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-                <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-                    <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
-                        <h2 className="text-4xl font-bold sm:text-5xl">
-                        ”we don't just work with concrete and steel, but with hope and dreams.”
-                            <span className="hidden sm:block text-2xl">→Yatharth Tech</span>
-                        </h2>
+import React from 'react';
+// import './Home.css'; // Import the CSS file for animations and styles
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-                        <Link 
-                            className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-                            to="contactus"
-                        >
-                            <svg
-                                fill="white"
-                                width="24"
-                                height="24"
-                                xmlns=""
-                                fillRule="evenodd"
-                                clipRule="evenodd"
+
+export default function AutoScrollingPage() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const items = [
+        {
+            title: 'Innovative Solutions',
+            description: 'We provide innovative solutions for modern construction challenges.',
+        },
+        {
+            title: 'Sustainable Practices',
+            description: 'Committed to sustainability with eco-friendly building practices.',
+        },
+        {
+            title: 'Expert Team',
+            description: 'Our team of experts ensures high-quality craftsmanship and precision.',
+        },
+        {
+            title: 'Customer Satisfaction',
+            description: 'We prioritize customer satisfaction with tailored services and support.',
+        },
+        {
+            title: 'Future-Ready Designs',
+            description: 'Designs that are not only functional but also future-ready.',
+        },
+    ];
+
+    const handleDotClick = (index) => {
+        setCurrentIndex(index);
+    };
+    return (
+        <div className="relative overflow-hidden mt-10 mb-10 rounded-lg">
+            <section className="relative w-full h-screen flex items-center justify-center bg-blue-500 text-white">
+                <div className="absolute inset-0">
+                    <img
+                        src="https://images.pexels.com/photos/176342/pexels-photo-176342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Hero Background"
+                        className="object-cover w-full h-full opacity-50"
+                    />
+                </div>
+                <div className="relative z-10 text-center">
+                    <h1 className="text-4xl sm:text-6xl font-bold mb-4">
+                        Building the Future, One Project at a Time
+                    </h1>
+                    <p className="text-lg sm:text-2xl mb-8">
+                        Exceptional construction services tailored to your needs.
+                    </p>
+                    <Link
+                        className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-orange-700 transition"
+                        to="/contactUs"
+                    >
+                        Get in Touch
+                    </Link>
+                </div>
+            </section>
+
+            <section className="py-20 bg-gray-200">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
+                    <div className="relative">
+                        <div className="overflow-hidden">
+                            <div
+                                className="flex transition-transform duration-500"
+                                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                             >
-                                <path d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z" />
-                            </svg>
-                            &nbsp; Contact Now
-                        </Link>
+                                {items.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex-none w-full p-8 bg-white rounded-lg shadow-lg"
+                                    >
+                                        <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+                                        <p className="text-gray-700">{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="absolute inset-x-0 -bottom-1/4 flex justify-center space-x-2">
+                            {items.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => handleDotClick(index)}
+                                    className={`w-4 h-4 rounded-full ${index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
+                                        }`}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="https://img.freepik.com/free-vector/townhouse-buildings-isometric-composition-with-view-building-site-crane-residential-dwelling-house-construction_1284-31619.jpg?t=st=1723666307~exp=1723669907~hmac=7a37f7eb83d5acdd31309668ed767bf0e870651d1aac555e3fc661e914c4a578&w=996" alt="image1" />
+            {/* <section id="contact" className="py-20 bg-blue-600 text-white">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+                    <p className="text-lg mb-8">
+                        Ready to start your project? Contact us today for a free consultation.
+                    </p>
+                    <a
+                        href="mailto:admin@yathartharchitech.com"
+                        className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-orange-700 transition"
+                    >
+                        Email Us
+                    </a>
                 </div>
-                
-            </aside>
-
-            <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://img.freepik.com/premium-vector/drawing-building-with-crane-building-it_1013341-161190.jpg?w=996" alt="image2" />
-            </div>
-
-            
-
-            <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Yatharth Architect</h1>
+            </section> */}
         </div>
     );
 }
-
