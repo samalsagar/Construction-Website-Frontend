@@ -72,8 +72,16 @@ function Register() {
         
         const raw = JSON.stringify({
           "email": email,
-          "subject": "Welocme from yTech team",
-          "message": "Thank you for signing up!!! we will get back to you soon!!!!"
+          "subject": "Welcome to Yatharth Architect!",
+          "message": `Thank you for registering with us. We are thrilled to have you join our community and look forward to partnering with you on your architectural journey. At Yatharth Architect, we are dedicated to turning your vision into reality with innovative design solutions and exceptional service. 
+
+Our team of experts is here to guide you every step of the way, ensuring that your project is not only functional but also beautifully crafted to reflect your unique style and needs.
+
+If you have any questions or need assistance, please don't hesitate to reach out. Welcome aboard, and let’s build something extraordinary together!
+
+Warm regards,
+The Yatharth Architect Team
+          `
         });
         
         const requestOptions = {

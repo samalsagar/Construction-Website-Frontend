@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom' 
+import { Link, NavLink } from 'react-router-dom' ;
+import yTechLogo from '../../assets/yTechLogo.jpeg';
 const Header = () => {
     return (
         <header className="shadow sticky z-50 top-0">
@@ -7,7 +8,8 @@ const Header = () => {
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
-                            src="https://img.freepik.com/free-vector/y-letter-colorful-logo-gradient-vector-designs_343694-1188.jpg?t=st=1723667659~exp=1723671259~hmac=faef00afe3f84ab06ca4fb6121b077704c63702b952aa5ce73f1b54750dca5b6&w=996"
+                            // src="https://img.freepik.com/free-vector/y-letter-colorful-logo-gradient-vector-designs_343694-1188.jpg?t=st=1723667659~exp=1723671259~hmac=faef00afe3f84ab06ca4fb6121b077704c63702b952aa5ce73f1b54750dca5b6&w=996"
+                            src={yTechLogo}
                             className="mr-3 h-12"
                             alt="Logo"
                         />

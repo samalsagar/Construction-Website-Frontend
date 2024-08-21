@@ -11,6 +11,8 @@ import ContactUs from './components/ContactUs/ContactUs.jsx'
 import Login from './components/Login/Login.jsx'
 import User from './components/User/User.jsx'
 import Register from './components/Register/Register.jsx'
+import ServiceDetails from './components/ServiceDetails/ServiceDetails.jsx'
+import Rating from './components/Ratings/Ratings.jsx'
 
 // const router = createBrowserRouter(
 //   [
@@ -53,6 +55,8 @@ const router = createBrowserRouter(
       <Route path='login' element={<Login /> }/>
       <Route path='register' element={<Register /> }/>
       <Route path='User/:id' element={<User /> }/>
+      <Route path='serviceDetails/:type' element={<ServiceDetails />} />
+      <Route path='rateus' element={<Rating /> }/>
     </Route>
   )
 )

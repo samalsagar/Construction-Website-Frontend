@@ -1,35 +1,69 @@
-import React from 'react';
-
+import React, { useCallback } from 'react';
+import plan from "../../assets/plan.jpeg";
+import consruction from "../../assets/Construction.jpeg";
+// import plan_const from "../../assets/plan_const.jpeg";
+import planningConstruction from "../../assets/planningConstruction.jpeg";
+import { Link } from 'react-router-dom';
+import ServiceDetails from '../ServiceDetails/ServiceDetails';
 function Services() {
+    const hanldeSubmit = (params) => {
+       <Link to="/serviceDetails">
+       </Link>
+    }
     return (
         <div className='flex gap-x-12 mt-10 mb-10'>
-            <div>
-                <a href="#" className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://images.pexels.com/photos/190417/pexels-photo-190417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Service Image" />
-                    <div className="flex flex-col justify-between p-4 leading-normal">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            <div className="max-w-sm bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div>
+                    <img className="rounded-t-lg" src={plan} alt="plan img" />
+                </div>
+                <div className="p-5">
+                    <div>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Your Roadmap to Construction Success: Planning with Precision</h5>
                     </div>
-                </a>
-            </div>
-            <div>
-                <a href="#" className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://images.pexels.com/photos/190417/pexels-photo-190417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Service Image" />
-                    <div className="flex flex-col justify-between p-4 leading-normal">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Effective planning is the cornerstone of successful construction projects. It transforms abstract ideas and architectural blueprints into tangible realities by laying out a clear path from inception to completion. Here’s why meticulous planning is crucial:</p>
+                    <Link to="/serviceDetails/planning" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </Link>
+                </div>
             </div>
 
-            <div>
-                <a href="#" className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://images.pexels.com/photos/190417/pexels-photo-190417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Service Image" />
-                    <div className="flex flex-col justify-between p-4 leading-normal">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
+            <div className="max-w-sm bg-white  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img className="rounded-t-lg" src={consruction} alt="plan img" />
                 </a>
+                <div className="p-5">
+                    <div>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Crafting Quality: Excellence in Construction Management</h5>
+                    </div>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Construction is a multifaceted industry that plays a critical role in shaping the world around us. It encompasses the creation, renovation, and maintenance of buildings, infrastructure, and various other structures.</p>
+                    <Link to="/serviceDetails/construction" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-4">
+                        Read more
+                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </Link>
+                </div>
+            </div>
+
+            <div className="max-w-sm bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div>
+                    <img className="rounded-t-lg" src={planningConstruction} alt="plan img" />
+                </div>
+                <div className="p-5">
+                    <div>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Optimizing Construction Through Planning</h5>
+                    </div>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">In construction, effective planning is essential for project success. It provides a solid foundation that guides the project from start to finish, ensuring that objectives are met. Here’s why planning is so important.</p>
+                    <Link to="/serviceDetails/planningAndconstruction" className="mt-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </Link>
+                </div>
             </div>
         </div>
     );
