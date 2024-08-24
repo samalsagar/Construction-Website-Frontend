@@ -1,60 +1,88 @@
 import React from 'react';
-
+import ceoImg from '../../assets/ceo.jpeg';
+import { Link } from 'react-router-dom';
 function About() {
   return (
-    <div className="grid mb-8 border mt-10 border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
-      <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
-          <p className="my-4">If you care for your time, I hands down would go with this."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-          <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
-          <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-            <div>Bonnie Green</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Developer at Open AI</div>
+    <div class="bg-gray-100">
+      <div class="container mx-auto py-8">
+        <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
+          <div class="col-span-4 sm:col-span-3">
+            <div class="bg-white shadow rounded-lg p-6">
+              <div class="flex flex-col items-center">
+                <img src={ceoImg} class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0" >
+
+                </img>
+                <h1 class="text-xl font-bold">Rohan Mishra</h1>
+                <p class="text-gray-700">CEO/FOUNDER</p>
+                <p>+91- 6306206941</p>
+              </div>
+              <hr class="my-6 border-t border-gray-300" />
+              <div class="flex flex-col">
+                <span class="text-gray-700 uppercase font-bold tracking-wider mb-2">SERVICES</span>
+                <ul>
+                  <Link to="/services">
+                    <li class="mb-2">Construction</li>
+                  </Link>
+                  <Link to="/services">
+                    <li class="mb-2">Construction Planning</li>
+                  </Link>
+                  <Link to="/services">
+                    <li class="mb-2">Renovation and Construction</li>
+                  </Link>
+
+                </ul>
+              </div>
+            </div>
           </div>
-        </figcaption>    
-      </figure>
-      <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-          <p className="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-          <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture" />
-          <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-            <div>Roberta Casas</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+          <div class="col-span-4 sm:col-span-9">
+            <div class="bg-white shadow rounded-lg p-6">
+              <h2 class="text-xl font-bold mb-4">About Us</h2>
+              <p class="text-gray-700">YATHARTH ARCHITECT : Building Excellence Since 2018<br />
+
+                Founded in 2018, YATHARTH ARCHITECT has rapidly established itself as a trusted leader in the construction industry. With a passion for quality and a commitment to excellence, we specialize in planning, construction, and renovation, bringing your vision to life with precision and care.
+              </p>
+              <h2 class="text-xl font-bold mt-6 mb-4">Our Journey</h2>
+              <div class="mb-6">
+                <p class="mt-2">
+                  Since our inception, we have proudly completed over 100 diverse projects, ranging from residential and commercial constructions to extensive renovations. Our journey has been defined by our unwavering dedication to delivering superior craftsmanship, innovative solutions, and exceptional client service.
+                </p>
+              </div>
+
+
+              <h2 class="text-xl font-bold mt-6 mb-4">Our Expertise</h2>
+              <div class="mb-6">
+                <p class="mt-2">
+                  <p>At YATHARTH ARCHITECT, we offer a comprehensive suite of services that includes:</p>
+                  <b>Planning:</b> Detailed project planning. <br />
+                  <b>Construction:</b> High-quality construction services. <br />
+                  <b>Renovation:</b> Expert renovation solutions.  <br />
+                </p>
+              </div>
+
+              <h2 class="text-xl font-bold mt-6 mb-4">Our Commitment</h2>
+              <div class="mb-6">
+                <p class="mt-2">
+                Our success is built on a foundation of integrity, transparency, and collaboration. We work closely with our clients, understanding their needs and goals, to deliver results that exceed expectations. Each project is approached with a commitment to quality, timeliness, and budget adherence.
+                </p>
+              </div>
+
+              <h2 class="text-xl font-bold mt-6 mb-4">Why Choose Us?</h2>
+              <div class="mb-6">
+                <p class="mt-2">
+                  <b>Proven Track Record:</b>Over 100 completed projects with a reputation for excellence.<br />
+                  <b>Experienced Team:</b>Skilled professionals with a deep understanding of the construction industry.<br />
+                  <b>Client-Centric Approach:</b>Personalized service tailored to meet your unique requirements.<br />
+                </p>
+              </div>
+              <div>
+              <p>
+                As we continue to grow and evolve, YATHARTH ARCHITECT remains dedicated to setting new standards in the construction industry. We look forward to the opportunity to collaborate with you on your next project and turn your vision into reality.
+                </p>
+              </div>
+            </div>
           </div>
-        </figcaption>    
-      </figure>
-      <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
-          <p className="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-          <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture" />
-          <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-            <div>Jese Leos</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
-          </div>
-        </figcaption>    
-      </figure>
-      <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-          <p className="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-          <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture" />
-          <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-            <div>Joseph McFall</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">CTO at Google</div>
-          </div>
-        </figcaption>    
-      </figure>
+        </div>
+      </div>
     </div>
   );
 }

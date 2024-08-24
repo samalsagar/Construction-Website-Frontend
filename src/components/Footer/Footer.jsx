@@ -76,17 +76,17 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <Link to="/services" className="hover:underline">
-                                        Planning
+                                        Construction Planning
                                     </Link>
                                 </li>
                                 <li className='mb-4'>
-                                    <Link to="" className="hover:underline">
+                                    <Link to="/services" className="hover:underline">
                                         Construction
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="hover:underline">
-                                       Planning & Construction
+                                    <Link to="/services" className="hover:underline">
+                                       Renovation and Construction
                                     </Link>
                                 </li>
 
@@ -103,7 +103,7 @@ export default function Footer() {
                                 </li>
                                 <li className='mb-4'>
                                     <Link to="#" className="hover:underline">
-                                        Rate &amp; Conditions
+                                        Terms &amp; Conditions
                                     </Link>
                                 </li>
 

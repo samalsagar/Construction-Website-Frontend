@@ -13,6 +13,9 @@ import User from './components/User/User.jsx'
 import Register from './components/Register/Register.jsx'
 import ServiceDetails from './components/ServiceDetails/ServiceDetails.jsx'
 import Rating from './components/Ratings/Ratings.jsx'
+import Plan from './components/Plan/Plan.jsx'
+import Construction from './components/Construction/Construction.jsx'
+import Renovation from './components/Renovation/Renovation.jsx'
 
 // const router = createBrowserRouter(
 //   [
@@ -57,6 +60,9 @@ const router = createBrowserRouter(
       <Route path='User/:id' element={<User /> }/>
       <Route path='serviceDetails/:type' element={<ServiceDetails />} />
       <Route path='rateus' element={<Rating /> }/>
+      <Route path='plan/:serviceDetails' element={<Plan />}/>
+      <Route path='construction/:constructionPlans' element={<Construction />}/>
+      <Route path='renovation/:renovationPlans' element={<Renovation />}/>
     </Route>
   )
 )

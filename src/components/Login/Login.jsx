@@ -32,52 +32,18 @@ export default function Login() {
 
             if (resultJson.success) {
                 setLoginStatus(true);
-                setErrorMessage(''); // Clear error message on success
-
-                saveLoginDetails();
+                setErrorMessage('');
 
             } else {
                 setLoginStatus(false);
-                setErrorMessage(resultJson.message); // Set error message on failure
+                setErrorMessage(resultJson.message);
             }
-
-
-            // await fetch("http://localhost:8080/login", requestOptions)
-            // .then((response) => response.text())
-            // .then((result) => {
-            //     console.log(result);
-            //     if(JSON.parse(result).success)  setLoginStatus(true);
-
-            // })
-            // .catch((error) => console.error(error));
 
         } catch (error) {
             console.error(error);
             setLoginStatus(false);
-            setErrorMessage(resultJson.message); // Set error message on error
+            setErrorMessage(resultJson.message);
         }
-    }
-
-    const saveLoginDetails = async() => {
-        const myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Cookie", "private_content_version=e36b41f68c87bf1df8e6f394cb1341b1");
-
-        const raw = JSON.stringify({
-            "email": email
-        });
-
-        const requestOptions = {
-            method: "POST",
-            headers: myHeaders,
-            body: raw,
-            redirect: "follow"
-        };
-
-        await fetch("http://localhost:8080/save", requestOptions)
-            .then((response) => response.text())
-            .then((result) => console.log(result))
-            .catch((error) => console.error(error));
     }
 
     return (

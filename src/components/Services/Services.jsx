@@ -18,7 +18,7 @@ function Services() {
                 </div>
                 <div className="p-5">
                     <div>
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Your Roadmap to Construction Success: Planning with Precision</h5>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Construction Planning</h5>
                     </div>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Effective planning is the cornerstone of successful construction projects. It transforms abstract ideas and architectural blueprints into tangible realities by laying out a clear path from inception to completion. Here’s why meticulous planning is crucial:</p>
                     <Link to="/serviceDetails/planning" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -36,7 +36,7 @@ function Services() {
                 </a>
                 <div className="p-5">
                     <div>
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Crafting Quality: Excellence in Construction Management</h5>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Construction</h5>
                     </div>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Construction is a multifaceted industry that plays a critical role in shaping the world around us. It encompasses the creation, renovation, and maintenance of buildings, infrastructure, and various other structures.</p>
                     <Link to="/serviceDetails/construction" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-4">
@@ -54,7 +54,7 @@ function Services() {
                 </div>
                 <div className="p-5">
                     <div>
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Optimizing Construction Through Planning</h5>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Renovation & Construction</h5>
                     </div>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">In construction, effective planning is essential for project success. It provides a solid foundation that guides the project from start to finish, ensuring that objectives are met. Here’s why planning is so important.</p>
                     <Link to="/serviceDetails/planningAndconstruction" className="mt-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

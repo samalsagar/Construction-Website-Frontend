@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom";
-import twoD from "../../assets/Plan2DImages/twoD.webp"
-import threeD from "../../assets/Plan3DImages/threeD.webp"
-import beam from "../../assets/BeamImages/beam.webp"
-import plumb from "../../assets/PlumbingImages/plumbing.png"
-import elevation from "../../assets/ElevationImages/elevation.jpg"
-
-// Updated cardData object
+import { useParams, useNavigate } from "react-router-dom";
+import twoD from "../../assets/Plan2DImages/twoD.webp";
+import threeD from "../../assets/Plan3DImages/threeD.webp";
+import beam from "../../assets/BeamImages/beam.webp";
+import plumb from "../../assets/PlumbingImages/plumbing.png";
+import elevation from "../../assets/ElevationImages/elevation.jpg";
+import constr from "../../assets/ConstructionImages/const.jpeg";
+import renovation from "../../assets/Renovations/renovation.jpg";
 const cardData = {
     planning: [
         {
@@ -28,7 +28,6 @@ const cardData = {
             title: 'Plumbing Plan',
             description: `Plumbing plans are integral to the design and functionality of a building's water and waste management systems. They ensure that water supply, drainage, and sewage systems operate efficiently and meet safety standards. Here’s a breakdown of what plumbing plans encompass:`,
         },
-
         {
             imgSrc: elevation,
             title: 'Elevation Plan',
@@ -37,48 +36,49 @@ const cardData = {
     ],
     construction: [
         {
-            imgSrc: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
-            title: 'Construction Card 1',
-            description: 'Details about construction project 1.',
-        },
-        {
-            imgSrc: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
-            title: 'Construction Card 2',
-            description: 'Details about construction project 2.',
+            imgSrc: constr,
+            title: 'Construction',
+            description: 'Construction is a multifaceted field that encompasses the design, planning, and building of structures and infrastructure. It is a crucial industry that drives economic growth and development, shaping the environment in which people live, work, and play.',
         },
     ],
     planningAndconstruction: [
         {
-            imgSrc: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
-            title: 'Planning & Construction Card 1',
-            description: 'Details about planning and construction project 1.',
-        },
-        {
-            imgSrc: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
-            title: 'Planning & Construction Card 2',
-            description: 'Details about planning and construction project 2.',
-        },
+            imgSrc: renovation,
+            title: 'Renovation & Construction',
+            description: 'Renovation is the process of improving or updating an existing structure to enhance its functionality, appearance, or value. It involves altering or refurbishing a space rather than constructing a new one.',
+        }
     ],
-    
 };
 
 function ServiceDetails() {
     const { type } = useParams();
-    const cards = cardData[type] || []; // Fallback to an empty array if type is not found
-
-    // Determine the heading based on type
+    const navigate = useNavigate();
+    const cards = cardData[type] || [];
     const heading = (() => {
         switch (type) {
             case 'planning':
                 return 'All the plan Services We Offer';
             case 'construction':
-                return 'Construction Details';
+                return 'Construction Services We Offer';
             case 'planningAndconstruction':
-                return 'Planning & Construction Details';
+                return 'Renovation Services we Offer';
             default:
-                return 'Details'; // Default heading
+                return 'Details';
         }
     })();
+    const handleView = (param) => {
+        console.log(param);
+
+        if(param === 'Construction') {
+            navigate(`/construction/${param}`);
+        } else if(param === 'Renovation & Construction'){
+            navigate(`/renovation/${param}`);
+        } else {
+            navigate(`/plan/${param}`);
+        }
+        
+        
+    };
 
     return (
         <div className="py-16">
@@ -91,8 +91,8 @@ function ServiceDetails() {
                                 <img className="object-cover w-full h-48" src={card.imgSrc} alt="Product" />
                                 <div className="absolute inset-0 bg-black opacity-40"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <button className="bg-white text-gray-900 py-1 px-4 rounded-full font-bold hover:bg-gray-300">
-                                        View Plans
+                                    <button onClick={() => handleView(card.title)} className="bg-white text-gray-900 py-1 px-4 rounded-full font-bold hover:bg-gray-300">
+                                        View {card.title}
                                     </button>
                                 </div>
                             </div>
