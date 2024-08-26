@@ -4,8 +4,10 @@ import threeD from "../../assets/Plan3DImages/threeD.webp";
 import beam from "../../assets/BeamImages/beam.webp";
 import plumb from "../../assets/PlumbingImages/plumbing.png";
 import elevation from "../../assets/ElevationImages/elevation.jpg";
-import constr from "../../assets/ConstructionImages/const.jpeg";
+import constr from "../../assets/ConstructionImages/const.jpg";
 import renovation from "../../assets/Renovations/renovation.jpg";
+// import elec from "../../assets/ElectricalImages/electrical.jpg"
+import electrical from "../../assets/ElectricalImages/elec.jpg"
 const cardData = {
     planning: [
         {
@@ -32,6 +34,12 @@ const cardData = {
             imgSrc: elevation,
             title: 'Elevation Plan',
             description: `Elevation drawings are vital components in architectural and construction design, providing a clear, two-dimensional view of a building’s exterior. They help visualize how a structure will appear from different angles, offering a detailed representation of its façade. Here’s an overview of what elevation drawings include and their significance.`,
+        },
+
+        {
+            imgSrc: electrical,
+            title: 'Electrical Plan',
+            description: `An electrical plan is a critical component of building design that outlines the layout and specifications for electrical systems within a structure. It provides detailed information on the placement and configuration of electrical components to ensure the safe, efficient, and reliable distribution of power.`,
         },
     ],
     construction: [

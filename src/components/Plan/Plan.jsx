@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import twoD1 from "../../assets/Plan2DImages/twoD1.jpg"; 
-import twoD2 from "../../assets/Plan2DImages/twoD2.jpg"; 
-import twoD3 from "../../assets/Plan2DImages/twoD3.webp"; 
+import twoD1 from "../../assets/Plan2DImages/twoD1.jpeg"; 
+import twoD2 from "../../assets/Plan2DImages/twoD2.jpeg"; 
+import twoD3 from "../../assets/Plan2DImages/twoD3.jpeg"; 
 import twoD4 from "../../assets/Plan2DImages/twoD4.jpg"; 
 import threeD1 from "../../assets/Plan3DImages/3D1.jpeg"; 
 import threeD2 from "../../assets/Plan3DImages/3D2.jpeg"; 
@@ -19,6 +19,7 @@ import elev1 from "../../assets/ElevationImages/elev1.jpg";
 import elev2 from "../../assets/ElevationImages/elev2.jpg";
 import elev3 from "../../assets/ElevationImages/elev3.jpg";
 import elev4 from "../../assets/ElevationImages/elev4.jpg";
+import ele1 from "../../assets/ElectricalImages/elec1.jpeg";
 const twoDImages = [
   { image: twoD1 },
   { image: twoD2 },
@@ -54,6 +55,10 @@ const elevationImages = [
   { image: elev4 }
 ]
 
+const electricalImages = [
+  { image: ele1 }
+]
+
 function Plan() {
   const { serviceDetails } = useParams();
   const [images, setImages] = useState([]);
@@ -75,6 +80,9 @@ function Plan() {
       case 'Elevation Plan':
         setImages(elevationImages);
         break;
+        case 'Electrical Plan':
+          setImages(electricalImages);
+          break;
       default:
         setImages([]);
         break;

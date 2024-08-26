@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
-import const1 from "../../assets/ConstructionImages/const1.png";
-import const2 from "../../assets/ConstructionImages/const2.jpg";
-import const3 from "../../assets/ConstructionImages/const3.png";
-import const4 from "../../assets/ConstructionImages/const4.jpg";
+import conImg1 from "../../assets/ConstructionImages/conImg1.jpeg"
+import conImg2 from "../../assets/ConstructionImages/conImg2.jpeg"
+import conImg3 from "../../assets/ConstructionImages/conImg3.jpeg"
+import conImg4 from "../../assets/ConstructionImages/conImg4.jpeg"
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 const constructionImages = [
-    { image: const1 },
-    { image: const2 },
-    { image: const3 },
-    { image: const4 }
+    { image: conImg1 },
+    { image: conImg2 },
+    { image: conImg3 },
+    { image: conImg4 }
 ];
 function Construction() {
     const { constructionPlans } = useParams();

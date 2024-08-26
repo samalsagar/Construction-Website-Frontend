@@ -118,7 +118,7 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold font-serif text-gray-900 uppercase">Contact</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    Address : Suryanagar Colony,<br />Gilat bazar behind <br /> Uco Bank Bhojubheer Varanasi 221003
+                                    Address : Surya-Nagar Colony,<br />Gilat Bazar, <br /> Uco Bank, Varanasi, 221003
                                 </li>
                                 <li className='mb-4'>
                                     <Link to="#">
