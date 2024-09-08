@@ -16,11 +16,11 @@ export default function Footer() {
                             />
                         </Link>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
+                    <div className="grid grid-cols-2 gap-7 sm:gap-6 sm:grid-cols-4">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase font-serif">Resources</h2>
                             <ul className="text-gray-500 font-medium">
-                                <li className="mb-4">                                  
+                                <li className="mb-4">
                                     <NavLink
                                         to="/"
                                         className={({ isActive }) =>
@@ -86,11 +86,11 @@ export default function Footer() {
                                 </li>
                                 <li>
                                     <Link to="/services" className="hover:underline">
-                                       Renovation and Construction
+                                        Renovation and Construction
                                     </Link>
                                 </li>
 
-                                
+
                             </ul>
                         </div>
                         <div>
@@ -114,22 +114,19 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div className="overflow-x-auto">
                             <h2 className="mb-6 text-sm font-semibold font-serif text-gray-900 uppercase">Contact</h2>
-                            <ul className="text-gray-500 font-medium">
-                                <li className="mb-4">
-                                    Address : Surya-Nagar Colony,<br />Gilat Bazar, <br /> Uco Bank, Varanasi, 221003
+                            <ul className="text-gray-500 font-medium space-y-4">
+                                <li className="mb-4 break-words">
+                                    Address: Surya-Nagar Colony,<br />
+                                    Gilat Bazar,<br />
+                                    Uco Bank, Varanasi, 221003
                                 </li>
-                                <li className='mb-4'>
-                                    <Link to="#">
-                                        emial : architectyatharth@gmail.com
-                                    </Link>
+                                <li className='mb-4 break-words'>
+                                    <div>Email: architectyatharth@gmail.com</div>
                                 </li>
-
-                                <li>
-                                    <Link to="#">
-                                        contact      : +91- 6306206941
-                                    </Link>
+                                <li className="break-words">
+                                   <div> Contact: +91-6306206941</div>
                                 </li>
                             </ul>
                         </div>

@@ -11,7 +11,7 @@ function Services() {
        </Link>
     }
     return (
-        <div className='flex gap-x-12 mt-10 mb-10'>
+        <div className='flex flex-wrap gap-x-8 mt-10 mb-10'>
             <div className="max-w-sm bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div>
                     <img className="rounded-t-lg" src={plan} alt="plan img" />
